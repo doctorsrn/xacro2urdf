@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="abb_irb4600_60_205">
+  <link name="base_link">
+    <collision name="collision">
+      <geometry>
+        <mesh filename="package://abb_irb4600_support/meshes/base/collision/base.dae"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://abb_irb4600_support/meshes/base/visual/base.dae"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+  <link name="wheel_l1">
+    <collision name="collision">
+      <geometry>
+        <mesh filename="package://abb_irb4600_support/meshes/base/collision/wheel_l1.dae"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://abb_irb4600_support/meshes/base/visual/wheel_l1.dae"/>
+      </geometry>
+      <!-- <material name="yellow"/> -->
+    </visual>
+  </link>
+
+  <joint type="revolute" name="joint_1">
+    <origin xyz="0.8 0.65 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <parent link="base_link"/>
+    <child link="wheel_l1"/>
+    <!-- <limit effort="0" lower="-3.141" upper="3.141" velocity="3.054"/> -->
+  </joint>
+ 
+</robot>
