@@ -1,13 +1,15 @@
 xacro2urdf
 =====
 
-Parser for xacro to urdf based on [saulrh/xacro](https://github.com/saulrh/xacro). This code can be executed without ROS environment.
+[Parser]() for xacro to urdf based on [saulrh/xacro](https://github.com/saulrh/xacro). This `xacro.py` can be executed without ROS environment.
 
-## Environment
-+ python3
+## My Environment
++ windows 8.1 
++ python3.6 with Anaconda
++ Visual Studio Code
 
 ## How to use
-
+Run `test_xacro.py` to verify that the `xacro.py` is working properly.
 
 **Attention:** the `xacro.py` must be in same directory as `urdf` file
 
