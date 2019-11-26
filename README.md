@@ -11,12 +11,11 @@ Parser([xacro.py](https://github.com/doctorsrn/xacro2urdf/blob/master/xacro.py))
 ## How to use
 1. Run `test_xacro.py` to verify that the `xacro.py` is working properly.
 2. Run `python xacro.py` can get some helpful information.
-3. To start convertion, move `xacro.py` to the same directory as `urdf` directory. You can see the file structure in [abb_irb4600_support]() directory.
-4. Run `python xacro.py -o ./target.urdf urdf/origin.xacro`. For example, `python xacro.py -o ./test_abb_4600.urdf urdf/irb4600_60_205.xacro` in [abb_irb4600_support]() directory.
+3. Move `xacro.py` to the same directory as `urdf` directory. You can see the file structure in [abb_irb4600_support](https://github.com/doctorsrn/xacro2urdf/tree/master/abb_irb4600_support) directory for detail.
+4. Run `python xacro.py -o ./target.urdf urdf/origin.xacro` to start convertion. For example, `python xacro.py -o ./test_abb_4600.urdf urdf/irb4600_60_205.xacro` in [abb_irb4600_support](https://github.com/doctorsrn/xacro2urdf/tree/master/abb_irb4600_support) directory. If convert successfully, the `test_abb_4600.urdf` will be generated.
 
-
-**Attention:** the `xacro.py` must be in same directory as `urdf` directory
+**Attention:** The `xacro.py` must be in same directory as `urdf` directory.
 
 ## What's difference from [saulrh/xacro](https://github.com/saulrh/xacro) code
 
-Because [saulrh/xacro](https://github.com/saulrh/xacro) code need python2 environment and works incorrectly in my computer, so I convert the code from python2 to python3 and fix some bugs in file path reading.
+Because [saulrh/xacro](https://github.com/saulrh/xacro) code need python2 environment and works incorrectly in my computer, so I convert the code from python2 to python3 and fix some bugs in file path reading in line 378. You can see the change through the comments.
